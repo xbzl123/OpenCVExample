@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:background="#ffffff"
+        android:text="Hello World!"
+        />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="识别身份证号码"/>
+            <Button
+                android:id="@+id/tinker_fix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修复"/>
+            <Button
+                android:id="@+id/next_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下一张"/>
+            <Button
+                android:id="@+id/scan_bluetooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜素蓝牙"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/surfaceview_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频页"/>
+            <Button
+                android:id="@+id/svg_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地图页"/>
+            <Button
+                android:id="@+id/scan_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索WIFI"/>
+            <Button
+            android:id="@+id/check_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="检查网络"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/start_cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始录屏"/>
+            <Button
+                android:id="@+id/stop_cast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="结束录屏"/>
+            <Button
+            android:id="@+id/snap_shoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截图"/>
+            <Button
+                android:id="@+id/play_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放"/>
+
+
+        </TableRow>
+        <Button
+            android:id="@+id/sound_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="声音换频">
+        </Button>
+        <Button
+            android:id="@+id/suface_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="surface播放">
+        </Button>
+        <Button
+            android:id="@+id/custom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义控件">
+
+        </Button>
+        <Button
+            android:id="@+id/alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="闹钟"
+            android:visibility="gone"
+            >
+            ></Button>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/sample_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_horizontal"
+        android:id="@+id/app_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

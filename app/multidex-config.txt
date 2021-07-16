@@ -1,0 +1,4 @@
+com/example/opencvexample/BaseApplication.class
+com/example/opencvexample/MapActivity.class
+com/example/opencvexample/MainActivity.class
+com/example/opencvexample/SecondActivity.class

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Disable the given check in this project -->
+    <issue id="IconMissingDensityFolder" severity="ignore" />
+
+<!--
+    &lt;!&ndash; Ignore the ObsoleteLayoutParam issue in the specified files &ndash;&gt;
+    <issue id="ObsoleteLayoutParam">
+        <ignore path="res/layout/activation.xml" />
+        <ignore path="res/layout-xlarge/activation.xml" />
+    </issue>
+
+    &lt;!&ndash; Ignore the UselessLeaf issue in the specified file &ndash;&gt;
+    <issue id="UselessLeaf">
+        <ignore path="res/layout/main.xml" />
+    </issue>
+-->
+
+    <!-- Change the severity of hardcoded strings to "error" -->
+    <issue id="HardcodedText" severity="warning" />
+    <issue id="SmallSp" severity="ignore"></issue>
+    <issue id="RtlHardcoded" severity="ignore"></issue>
+    <issue id="Deprecated" severity="warning">
+        <ignore regexp="singleLine"></ignore>
+    </issue>
+    <issue id="DuplicateStrings" severity="warning"></issue>
+    <issue id="MissingConstraints" severity="warning"></issue>
+    <issue id="MissingPermission" severity="warning"></issue>
+</lint>

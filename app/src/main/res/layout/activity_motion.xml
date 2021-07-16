@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotation="360"
+    app:layoutDescription="@xml/activity_motion_scene">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="148dp"
+        android:layout_height="147dp"
+        android:text="1111"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="148dp"
+        android:layout_height="147dp"
+        android:text="2222"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+    </Button>
+
+    <include layout="@layout/activity_motion2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"></include>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="148dp"
+        android:layout_height="147dp"
+        android:text="开始"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </Button>
+</androidx.constraintlayout.motion.widget.MotionLayout>

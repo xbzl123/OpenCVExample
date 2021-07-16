@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:id="@+id/sound_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入wifi密码: "
+        android:textSize="15dp"/>
+    <com.example.opencvexample.CustomEditText
+        android:id="@+id/sound_hz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="100"/>
+
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/sound_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置时间长为"
+            android:textSize="15dp"/>
+        <com.example.opencvexample.CustomEditText
+            android:id="@+id/sound_time_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:maxLength="100"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分钟"
+            android:textSize="15dp"/>
+    </TableRow>
+</LinearLayout>

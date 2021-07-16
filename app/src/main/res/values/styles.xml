@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="app_skin_blue" parent="AppTheme">
+        <item name="colorPrimary">#080</item>
+        <item name="colorPrimaryDark">#009</item>
+        <item name="colorAccent">#ff1</item>
+    </style>
+
+    <style name="app_skin_dark" parent="app_skin_blue">
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#009</item>
+        <item name="colorAccent">#ff1</item>
+    </style>
+
+    <style name="app_skin_white" parent="app_skin_blue">
+        <item name="colorPrimary">#fff</item>
+        <item name="colorPrimaryDark">#040</item>
+        <item name="colorAccent">#f81</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.AppTheme.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+</resources>

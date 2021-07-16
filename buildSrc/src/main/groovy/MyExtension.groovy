@@ -1,0 +1,4 @@
+
+class MyExtension{
+    String message
+}
