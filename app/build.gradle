@@ -190,10 +190,10 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.0-beta01'
 
 }
-File file = new File("D:\\OpenCV-android-sdk\\OpenCVExample\\res\\example.txt")
-file.eachLine {
-    String line -> println("\t" + line)
-}
+//File file = new File("D:\\OpenCV-android-sdk\\OpenCVExample\\res\\example.txt")
+//file.eachLine {
+//    String line -> println("\t" + line)
+//}
 
 //pluginSrc{
 //    message = 'hello longyanghe gradle plugin'

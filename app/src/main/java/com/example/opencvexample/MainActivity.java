@@ -1038,38 +1038,54 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected Boolean doInBackground(Void... voids) {
-                InputStream is = null;
+                InputStream isFace = null;
+                InputStream isNum = null;
                 FileOutputStream fos = null;
                 try {
-                    is = getAssets().open("lbpcascade_frontalface.xml");
-                    File file = new File("/sdcard/lbpcascade_frontalface.xml");
-
-//                    is = getAssets().open(language+".traineddata");
-//                    File file = new File("/sdcard/tess/tessdata/"+language+".traineddata");
-                    if(!file.exists()){
-                        file.getParentFile().mkdirs();
-                        fos = new FileOutputStream(file);
+                    isFace = getAssets().open("lbpcascade_frontalface.xml");
+                    File facefile = new File(Environment.getExternalStorageDirectory()+"/facedetection/lbpcascade_frontalface.xml");
+                    isNum = getAssets().open(language+".traineddata");
+                    File numberfile = new File(Environment.getExternalStorageDirectory()+"/tess/tessdata/"+language+".traineddata");
+                    if(!facefile.exists()){
+                        facefile.getParentFile().mkdirs();
+                        fos = new FileOutputStream(facefile);
                         byte[] buffer = new byte[2048];
                         int len;
-                        while ((len = is.read(buffer))!= -1){
+                        while ((len = isFace.read(buffer))!= -1){
                             fos.write(buffer,0,len);
                         }
                         fos.close();
                     }
-                    is.close();
+                    isFace.close();
+
+                    if(!numberfile.exists()){
+                        numberfile.getParentFile().mkdirs();
+                        fos = new FileOutputStream(numberfile);
+                        byte[] buffer = new byte[2048];
+                        int len;
+                        while ((len = isNum.read(buffer))!= -1){
+                            fos.write(buffer,0,len);
+                        }
+                        fos.close();
+                    }
+                    isNum.close();
+
 
                     Bitmap bitmap = BitmapFactory.decodeResource(getResources(),image);
-                    bitmap1 =  (Bitmap)JavaApi.FaceDetection_loadCascade(file.getAbsolutePath(),bitmap,Bitmap.Config.ARGB_8888);
-                    boolean isInited = tessBaseAPI.init("/sdcard/tess",language);
+                    bitmap1 =  (Bitmap)JavaApi.FaceDetection_loadCascade(facefile.getAbsolutePath(),bitmap,Bitmap.Config.ARGB_8888);
+                    boolean isInited = tessBaseAPI.init(Environment.getExternalStorageDirectory()+"/tess",language);
                     Log.e("result","=============11===isInited="+isInited);
 
                     return isInited;
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
                         try {
-                            if(null != is) {
-                                is.close();
+                            if(null != isNum) {
+                                isNum.close();
+                            }
+                            if(null != isFace) {
+                                isFace.close();
                             }
                             if(null != fos) {
                                 fos.close();
@@ -1092,9 +1108,8 @@ public class MainActivity extends AppCompatActivity {
                     tessBaseAPI.setVariable(TessBaseAPI.VAR_CHAR_WHITELIST, "/*京津苏粤闽甘桂鄂赣新皖浙沪渝新鲁冀豫云辽黑湘*/ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"); // 识别白名单
                     tessBaseAPI.setVariable(TessBaseAPI.VAR_CHAR_BLACKLIST, "!@#$%^&*()_+=-[]}{;:'\"\\|~`,./<>?"); // 识别黑名单
 
-                }
-                else{
-                    finish();
+                } else{
+//                    finish();
                 }
             }
         };
