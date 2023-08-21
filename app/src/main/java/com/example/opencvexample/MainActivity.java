@@ -109,7 +109,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
-import java.util.zip.Inflater;
+import com.module.picturerecognition.JavaApi;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Observable;
@@ -122,9 +122,6 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 public class MainActivity extends AppCompatActivity {
 
     //Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("OpenCV");
-    }
 
     private Bitmap bitmap1;
     private MediaProjectionManager mediaProjectionManager;

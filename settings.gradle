@@ -1,1 +1,2 @@
-include ':app', ':library',':buildSrc', ':myplugin'
+include ':app', ':library', ':buildSrc', ':myplugin'
+include ':picturerecognition'

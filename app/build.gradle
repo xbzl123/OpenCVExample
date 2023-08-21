@@ -18,7 +18,7 @@ android {
     buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.example.opencvexample"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "2.0"
@@ -30,20 +30,20 @@ android {
         ndk {
             abiFilters 'armeabi-v7a'//, 'x86'//,'arm64-v8a','x86', 'x86_64'
         }
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-                arguments "-DANDROID_STL=c++_shared"
-                abiFilters 'armeabi-v7a'//, 'x86'//,'arm64-v8a', 'x86_64'
-            }
-        }
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//                arguments "-DANDROID_STL=c++_shared"
+//                abiFilters 'armeabi-v7a'//, 'x86'//,'arm64-v8a', 'x86_64'
+//            }
+//        }
     }
 
-    sourceSets {
-        main() {
-            jniLibs.srcDirs = ['src/main/jniLibs']
-        }
-    }
+//    sourceSets {
+//        main() {
+//            jniLibs.srcDirs = ['src/main/jniLibs']
+//        }
+//    }
 
     buildTypes {
         release {
@@ -51,12 +51,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            path "src/main/cpp/CMakeLists.txt"
+//            version "3.10.2"
+//        }
+//    }
 
     dataBinding {
         enabled = true
@@ -164,7 +164,6 @@ android {
 }
 
 dependencies {
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0-alpha2'
@@ -188,8 +187,10 @@ dependencies {
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation "com.blankj:utilcode:1.25.9"
     implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.0-beta01'
+    implementation(name:'picturerecognition',ext:'aar')
 
 }
+
 //File file = new File("D:\\OpenCV-android-sdk\\OpenCVExample\\res\\example.txt")
 //file.eachLine {
 //    String line -> println("\t" + line)
@@ -199,10 +200,10 @@ dependencies {
 //    message = 'hello longyanghe gradle plugin'
 //}
 
-apply plugin: 'plugin-transform'
-
-apply plugin: 'mytest'
-apply plugin: 'mytransform-gradle'
-test111 {
-    str = '动态生成java类的字符串'
-}
+//apply plugin: 'plugin-transform'
+//
+//apply plugin: 'mytest'
+//apply plugin: 'mytransform-gradle'
+//test111 {
+//    str = '动态生成java类的字符串'
+//}
