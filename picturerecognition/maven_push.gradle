@@ -1,11 +1,11 @@
 apply plugin: 'maven-publish'
-def SNAPSHOT_REPOSITORY_URL = 'https://gitee.com/long__yang__he/picturerecognition.git'
+def SNAPSHOT_REPOSITORY_URL = 'https://github.com/xbzl123/OpenCVExample/releases'
 task generateSourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
     classifier 'sources'
 }
 
-def versionName = "1.0.0-SNAPSHOT"
+def versionName = "1.0.2-SNAPSHOT"
 
 publishing {
     publications {
@@ -45,8 +45,8 @@ publishing {
             url = versionName.endsWith('SNAPSHOT') ? SNAPSHOT_REPOSITORY_URL : RELEASE_REPOSITORY_URL
             // 仓库用户名密码
             credentials {
-                username = "jacklongyanghe@gmail"
-                password = "raysharp1991@"
+                username = "742781499@qq.com"
+                password = "raysharp2020"
             }
         }
         // 定义第二个 maven 仓库，名为 Nexus
@@ -54,6 +54,10 @@ publishing {
             // 必须显示指定 name
             name = "nexus"
             url = versionName.endsWith('SNAPSHOT') ? SNAPSHOT_REPOSITORY_URL : RELEASE_REPOSITORY_URL
+        }
+        maven {
+            //上传到项目本地仓库
+            url uri('../local_mavenrepo')
         }
     }
 }
