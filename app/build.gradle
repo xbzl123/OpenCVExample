@@ -187,7 +187,8 @@ dependencies {
     implementation "com.blankj:utilcode:1.25.9"
     implementation 'androidx.lifecycle:lifecycle-common-java8:2.3.0-beta01'
 //    implementation(name:'picturerecognition',ext:'aar')
-    implementation 'io.github.xbzl123:picturerecognition:0.0.1'
+    implementation project(path: ':picturerecognition')
+//    implementation 'io.github.xbzl123:picturerecognition:0.0.1'
 
 }
 

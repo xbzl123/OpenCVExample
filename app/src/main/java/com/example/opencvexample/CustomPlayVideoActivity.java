@@ -3,8 +3,10 @@ package com.example.opencvexample;
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
+import com.module.picturerecognition.JavaApi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -43,12 +45,13 @@ public class CustomPlayVideoActivity extends AppCompatActivity{
         public void surfaceDestroyed(SurfaceHolder holder) {
 
         }
+        String receviceVideoPath = Environment.getExternalStorageDirectory() + "/yuv/A.h264";
 
         @Override
         public void run() {
 //            File file = new File("/sdcard/class.mp4");
 //            Log.e("===","file :"+file.exists());
-            JavaApi.playMP4("/sdcard/class.mp3",getHolder().getSurface());
+            JavaApi.playMP4(Environment.getExternalStorageDirectory()+"/yuv/test.mp4",getHolder().getSurface());
 //            JavaApi.play(getHolder().getSurface());
         }
     }

@@ -1,2 +1,1 @@
-include ':app', ':library', ':groovydemo', ':myplugin'
-include ':picturerecognition'
+include ':app', ':library', ':groovydemo', ':myplugin', ':picturerecognition'

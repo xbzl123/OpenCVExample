@@ -28,6 +28,7 @@ public class SurfaceViewActivity extends AppCompatActivity {
     private SurfaceView surfaceView;
     private boolean pause;
     private int position;
+    private H264DeCodePlay h264DeCodePlay;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,7 @@ public class SurfaceViewActivity extends AppCompatActivity {
 //        setContentView(gameView);
     }
     GameSurfaceView gameView;
+
     private final class SurfaceCallback implements SurfaceHolder.Callback {
         @Override
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {

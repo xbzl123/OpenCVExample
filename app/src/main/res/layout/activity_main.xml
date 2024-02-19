@@ -110,6 +110,12 @@
             android:text="声音换频">
         </Button>
         <Button
+            android:id="@+id/camera_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="远程摄像头">
+        </Button>
+        <Button
             android:id="@+id/suface_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

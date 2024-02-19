@@ -292,7 +292,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.suface_play).setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, SurfaceViewActivity.class));
         });
-
+        findViewById(R.id.camera_server).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, CameraServerActivity.class));
+        });
         tessBaseAPI = new TessBaseAPI();
 //        AlertDialog alertDialog;
         initTess();
